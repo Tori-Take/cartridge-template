@@ -1,0 +1,22 @@
+{
+  "$schema": "https://appharbor.app/cartridge-schema-v1.json",
+  "spec_version": "1",
+  "id": "my-cartridge",
+  "version": "0.1.0",
+  "name": "My Cartridge",
+  "description": "AppHarbor カートリッジのサンプル。my_items テーブル + CRUD ページのミニマル構成。",
+  "icon": "📦",
+  "category": "その他",
+  "author": {
+    "name": "Your Name",
+    "url": "https://github.com/your-account"
+  },
+  "permissions": [
+    { "id": "viewer", "label": "閲覧者", "default": true },
+    { "id": "admin",  "label": "管理者" }
+  ],
+  "navigation": [
+    { "label": "一覧",     "path": "" },
+    { "label": "新規作成", "path": "new" }
+  ]
+}

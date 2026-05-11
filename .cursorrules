@@ -1,0 +1,21 @@
+このリポジトリは AppHarbor カートリッジの雛形です。
+詳細は CLAUDE.md を読んでください。
+
+最重要ルール（破ったら修正対象）:
+1. 全テーブルに organization_id カラムを必須で持たせる
+2. 全クエリは .eq('organization_id', ctx.actor.organizationId) でフィルタする
+3. Server Action は冒頭で必ず requireApp(slug, '<cartridge-id>') を呼ぶ
+4. スキーマは CREATE TABLE IF NOT EXISTS / ADD COLUMN IF NOT EXISTS で冪等に書く
+5. RLS ポリシーは organization_id = (auth.jwt() ->> 'organization_id')::uuid で書く
+
+利用可能な import:
+- @/sdk / @/sdk/* （プラットフォーム SDK）
+- @/sdk/client （ブラウザ側）
+- react / react-dom / next/*
+- 相対パス（./components/Foo 等）
+- npm パッケージ
+
+禁止 import:
+- @/lib/* / @/components/* / @/app/* （Studio 内部）
+
+参考実装: github.com/Tori-Take/cart-patrol-navi

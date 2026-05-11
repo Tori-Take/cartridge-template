@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
+  "name": "AppHarbor Cartridge",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "anthropic.claude-code",
+        "github.copilot"
+      ]
+    }
+  },
+  "postCreateCommand": "echo 'AppHarbor Cartridge ready. Edit cartridge files, push to GitHub, then add to AppHarborStudio cartridges-registry.yaml to preview.'",
+  "remoteUser": "node"
+}
