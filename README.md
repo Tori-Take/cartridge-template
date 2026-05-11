@@ -67,7 +67,12 @@ npm run cartridge:release my-cartridge
 │   ├── new/page.tsx                新規作成フォーム
 │   ├── new/actions.ts              Server Action
 │   └── [id]/page.tsx               詳細ページ
-├── CLAUDE.md                        AI 向けガイド（最重要）
+├── docs/                            📚 AI が深く参照するドキュメント
+│   ├── cookbook.md                 実装パターン集（10 種類）
+│   ├── sdk-reference.md            @/sdk 全 API リファレンス
+│   ├── pitfalls.md                 AI が間違えがちな罠
+│   └── prompts.md                  効果的なプロンプト例
+├── CLAUDE.md                        AI 向けエントリーポイント
 ├── .cursorrules                     Cursor 用規約
 ├── .github/copilot-instructions.md  Copilot 用規約
 └── AGENTS.md                        汎用 AI エージェント用

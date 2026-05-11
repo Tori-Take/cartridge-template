@@ -253,3 +253,24 @@ npm run cartridge:release my-cartridge
   → `supabase.storage.from('xxx-attachments').upload(...)` + バケット定義
 
 迷ったら `Tori-Take/cart-patrol-navi` の実装を参考にしてください（実用的な参考実装）。
+
+---
+
+## 📚 詳細ドキュメント
+
+このリポジトリの `docs/` 配下に AI が参照すべき詳細情報があります:
+
+| ファイル | 内容 |
+|---|---|
+| **`docs/cookbook.md`** | 10 種類の実装パターン集（CRUD / 検索 / ファイル / ワークフロー / etc.） |
+| **`docs/sdk-reference.md`** | `@/sdk` の全関数リファレンス + コード例 |
+| **`docs/pitfalls.md`** | AI が間違えがちな 10 個の罠 + チェックリスト |
+| **`docs/prompts.md`** | 効果的なプロンプト例 + AI への依頼テンプレ |
+
+**新機能を生成する前に必ず参照すべき:**
+1. 該当パターンがあれば `docs/cookbook.md` からコピペ・改変
+2. `@/sdk` の使い方は `docs/sdk-reference.md`
+3. 生成後は `docs/pitfalls.md` のチェックリストで自己診断
+
+**ユーザーへのヒント:**
+プロンプトの書き方に迷ったら `docs/prompts.md` を見せると、効果的な依頼方法が学べる。

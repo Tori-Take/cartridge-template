@@ -19,3 +19,12 @@
 - @/lib/* / @/components/* / @/app/* （Studio 内部）
 
 参考実装: github.com/Tori-Take/cart-patrol-navi
+
+詳細ドキュメント:
+- docs/cookbook.md: 実装パターン集（CRUD / 検索 / ファイル / ワークフロー等 10 種類）
+- docs/sdk-reference.md: @/sdk 全 API リファレンス
+- docs/pitfalls.md: AI が間違えがちな罠 + 自己チェックリスト
+- docs/prompts.md: 効果的なプロンプト例
+
+新機能を生成する前に該当する docs/cookbook.md パターンを参照すること。
+生成後は docs/pitfalls.md のチェックリストで自己診断すること。
