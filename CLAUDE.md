@@ -76,7 +76,7 @@ const { data } = await supabase
 // routes/new/actions.ts
 'use server'
 
-import { requireApp, getAdminSupabase } from '@/sdk'
+import { requireApp, getAdminSupabase } from '@appharbor/sdk'
 
 export async function createItemAction(slug: string, formData: FormData) {
   const ctx = await requireApp(slug, 'my-cartridge')  // ← 必須
@@ -145,7 +145,7 @@ ctx.role                  // アプリ内ロール（'viewer' | 'admin' 等）
 
 | 許可 | 例 |
 |---|---|
-| `@/sdk` / `@/sdk/*` | `import { requireApp } from '@/sdk'` |
+| `@/sdk` / `@/sdk/*` | `import { requireApp } from '@appharbor/sdk'` |
 | `react` / `react-dom` | `import { useState } from 'react'` |
 | `next/*` | `import Link from 'next/link'` |
 | 相対パス | `import { Foo } from './components/Foo'` |

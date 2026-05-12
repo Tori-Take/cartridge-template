@@ -1,0 +1,23 @@
+{
+  "name": "my-cartridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AppHarbor カートリッジ（'@appharbor/sdk' を使用）",
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@appharbor/sdk":   "github:Tori-Take/appharbor-sdk#main",
+    "@supabase/supabase-js": "^2",
+    "next":             "^16",
+    "react":            "^19",
+    "react-dom":        "^19",
+    "lucide-react":     "^1"
+  },
+  "devDependencies": {
+    "@types/node":      "^20",
+    "@types/react":     "^19",
+    "@types/react-dom": "^19",
+    "typescript":       "^5"
+  }
+}

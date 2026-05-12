@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { requireApp, getAdminSupabase } from '@/sdk'
+import { requireApp, getAdminSupabase } from '@appharbor/sdk'
 
 export default async function MyCartridgePage({
   params,

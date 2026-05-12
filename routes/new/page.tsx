@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { requireApp } from '@/sdk'
+import { requireApp } from '@appharbor/sdk'
 import { createItemAction } from './actions'
 
 export default async function NewItemPage({

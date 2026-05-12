@@ -131,7 +131,7 @@ export default async function Page({
    ```ts
    'use server'
    import { redirect } from 'next/navigation'
-   import { requireApp, getAdminSupabase } from '@/sdk'
+   import { requireApp, getAdminSupabase } from '@appharbor/sdk'
 
    export async function deleteItemAction(slug: string, id: string) {
      const ctx = await requireApp(slug, 'my-cartridge', (r) => r === 'admin')
@@ -172,7 +172,7 @@ export default async function Page({
    ```tsx
    'use client'
    import { useState } from 'react'
-   import { createBrowserSupabase } from '@/sdk/client'
+   import { createBrowserSupabase } from '@appharbor/sdk/client'
 
    export function PhotoUpload({ orgId, onUploaded }: { orgId: string; onUploaded: (path: string) => void }) {
      const supabase = createBrowserSupabase()

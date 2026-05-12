@@ -35,7 +35,7 @@
 `routes/page.tsx`:
 
 ```tsx
-import { requireApp, getAdminSupabase } from '@/sdk'
+import { requireApp, getAdminSupabase } from '@appharbor/sdk'
 
 export default async function ListPage({
   params,
@@ -127,7 +127,7 @@ const totalPages = Math.ceil((count ?? 0) / pageSize)
 `routes/[id]/edit/page.tsx`:
 
 ```tsx
-import { requireApp, getAdminSupabase } from '@/sdk'
+import { requireApp, getAdminSupabase } from '@appharbor/sdk'
 import { updateItemAction, deleteItemAction } from './actions'
 
 export default async function EditPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
@@ -162,7 +162,7 @@ export default async function EditPage({ params }: { params: Promise<{ slug: str
 
 import { redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
-import { requireApp, getAdminSupabase } from '@/sdk'
+import { requireApp, getAdminSupabase } from '@appharbor/sdk'
 
 export async function updateItemAction(slug: string, id: string, formData: FormData) {
   const ctx = await requireApp(slug, 'my-cartridge')
@@ -227,7 +227,7 @@ CREATE POLICY "my_cartridge_attachments_select" ON storage.objects
 ```tsx
 'use client'
 import { useState } from 'react'
-import { createBrowserSupabase } from '@/sdk/client'
+import { createBrowserSupabase } from '@appharbor/sdk/client'
 
 export function PhotoUpload({ orgId, itemId }: { orgId: string; itemId: string }) {
   const [uploading, setUploading] = useState(false)
@@ -347,7 +347,7 @@ const STATUS_COLOR: Record<string, string> = {
 ## 7. 権限による UI 出し分け
 
 ```tsx
-import { requireApp } from '@/sdk'
+import { requireApp } from '@appharbor/sdk'
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
@@ -391,7 +391,7 @@ export default async function AdminPage({ params }: { params: Promise<{ slug: st
 
 ```ts
 import { NextRequest, NextResponse } from 'next/server'
-import { requireActor, getAdminSupabase } from '@/sdk'
+import { requireActor, getAdminSupabase } from '@appharbor/sdk'
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params

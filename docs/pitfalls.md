@@ -128,7 +128,7 @@ CREATE POLICY "org_isolation" ON my_items
 
 ```tsx
 // サーバーコンポーネントなのに createBrowserSupabase を使ってる
-import { createBrowserSupabase } from '@/sdk/client'
+import { createBrowserSupabase } from '@appharbor/sdk/client'
 
 export default async function Page() {
   const supabase = createBrowserSupabase()  // ← サーバーで使うとエラー
@@ -140,7 +140,7 @@ export default async function Page() {
 
 ```tsx
 // サーバーコンポーネント: getAdminSupabase
-import { getAdminSupabase } from '@/sdk'
+import { getAdminSupabase } from '@appharbor/sdk'
 
 export default async function Page({ params }) {
   const supabase = getAdminSupabase()
@@ -149,7 +149,7 @@ export default async function Page({ params }) {
 
 // クライアントコンポーネント: createBrowserSupabase
 'use client'
-import { createBrowserSupabase } from '@/sdk/client'
+import { createBrowserSupabase } from '@appharbor/sdk/client'
 
 export function MyClientComponent() {
   const supabase = createBrowserSupabase()
@@ -177,7 +177,7 @@ import { LayoutHeader } from '@/app/layout'    // ← Studio ページ、禁止
 
 ```tsx
 // SDK は OK
-import { requireApp } from '@/sdk'
+import { requireApp } from '@appharbor/sdk'
 
 // 自分のカートリッジ内の相対パスは OK
 import { ItemCard } from './components/ItemCard'

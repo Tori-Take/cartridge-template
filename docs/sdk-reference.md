@@ -1,4 +1,4 @@
-# @/sdk リファレンス
+# @appharbor/sdk リファレンス
 
 カートリッジが import 可能な SDK 関数の全リスト。
 
@@ -11,7 +11,7 @@
 カートリッジページで認証 + アプリロールチェックを行い、コンテキストを返す。
 
 ```ts
-import { requireApp } from '@/sdk'
+import { requireApp } from '@appharbor/sdk'
 
 const ctx = await requireApp('org-slug', 'my-cartridge')
 
@@ -41,7 +41,7 @@ await requireApp(slug, 'my-cartridge', (role) => ['viewer', 'admin'].includes(ro
 主に API ルートや管理系で使う。
 
 ```ts
-import { requireActor } from '@/sdk'
+import { requireActor } from '@appharbor/sdk'
 
 const guard = await requireActor('org-slug', 'member')
 // 'member' | 'dept-admin' | 'org-admin'
@@ -65,7 +65,7 @@ guard.actor.organizationId
 特定ユーザーのアプリ内ロールを取得。
 
 ```ts
-import { getAppRole } from '@/sdk'
+import { getAppRole } from '@appharbor/sdk'
 
 const role = await getAppRole({
   organizationId: ctx.actor.organizationId,
@@ -86,7 +86,7 @@ const role = await getAppRole({
 **サーバーコンポーネント / Server Action / API ルートでのみ使う**。
 
 ```ts
-import { getAdminSupabase } from '@/sdk'
+import { getAdminSupabase } from '@appharbor/sdk'
 
 const supabase = getAdminSupabase()
 
@@ -125,7 +125,7 @@ await supabase.from('my_items')
 
 ```ts
 'use client'
-import { createBrowserSupabase } from '@/sdk/client'
+import { createBrowserSupabase } from '@appharbor/sdk/client'
 
 const supabase = createBrowserSupabase()
 

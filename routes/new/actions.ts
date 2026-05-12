@@ -1,7 +1,7 @@
 'use server'
 
 import { redirect } from 'next/navigation'
-import { requireApp, getAdminSupabase } from '@/sdk'
+import { requireApp, getAdminSupabase } from '@appharbor/sdk'
 
 /**
  * 新規項目作成 Server Action.
