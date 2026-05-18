@@ -266,6 +266,7 @@ npm run cartridge:release my-cartridge
 | **`docs/sdk-reference.md`** | `@/sdk` の全関数リファレンス + コード例 |
 | **`docs/pitfalls.md`** | AI が間違えがちな 10 個の罠 + チェックリスト |
 | **`docs/prompts.md`** | 効果的なプロンプト例 + AI への依頼テンプレ |
+| **`docs/release-checklist.md`** | Stage 1 → 5 リリース手順 + よくあるハマりポイント FAQ |
 
 **新機能を生成する前に必ず参照すべき:**
 1. 該当パターンがあれば `docs/cookbook.md` からコピペ・改変
