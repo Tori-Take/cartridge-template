@@ -18,5 +18,8 @@
   "navigation": [
     { "label": "一覧",     "path": "" },
     { "label": "新規作成", "path": "new" }
-  ]
+  ],
+  "appharbor": {
+    "sdkVersion": "^1.0.0"
+  }
 }
