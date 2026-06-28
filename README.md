@@ -28,6 +28,20 @@ cartridges:
 Studio を再起動すると GitHub から自動 fetch され、
 `http://localhost:3200/org/studio-sandbox/apps/my-cartridge` で動作確認できます。
 
+### 2.5. 本体への自動反映を有効化（推奨）
+
+このテンプレートには `.github/workflows/redeploy-appharbor.yml` が同梱されており、
+**main に push すると AppHarbor 本体を自動で再ビルド**して最新のカートリッジを取り込ませます。
+有効化するには、自分のリポに secret を 1 つ登録するだけ:
+
+```bash
+gh secret set APPHARBOR_DEPLOY_HOOK_URL --repo your-account/my-cartridge
+```
+
+URL は Vercel の AppHarbor プロジェクト → Settings → Git → Deploy Hooks で発行します
+（管理者に共有してもらってください）。詳細は本体リポの
+`docs/cartridge-auto-redeploy.md` を参照。
+
 ### 3. AI でブラッシュアップ
 
 このリポジトリには AI アシスタント向け規約ファイルが含まれています:
